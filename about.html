@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="О проекте QVAQEL - платформа для разведки открытых источников" />
+<title>О проекте · QVAQEL</title>
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<div id="bg-canvas"></div>
+<div id="bg-grid"></div>
+
+<header class="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="logo">
+      <div class="logo-banner">
+        <svg viewBox="0 0 200 40" xmlns="http://www.w3.org/2000/svg">
+          <text x="10" y="30" font-family="monospace" font-size="28" font-weight="bold" fill="#00d4ff" letter-spacing="2">QVAQEL</text>
+        </svg>
+      </div>
+    </a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Главная</a></li>
+      <li><a href="about.html" class="active">О проекте</a></li>
+      <li><a href="tools.html">Инструменты</a></li>
+      <li><a href="methodology.html">Методология</a></li>
+      <li><a href="geoint.html">GEOINT</a></li>
+      <li><a href="contact.html">Контакты</a></li>
+    </ul>
+    <button class="nav-cta" onclick="document.getElementById('cta').scrollIntoView({behavior:'smooth'})">Начать →</button>
+    <button class="burger" id="burger" aria-label="Меню">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<section class="page-hero">
+  <div class="container">
+    <div class="reveal">
+      <span class="section-tag">// about · qvaqel</span>
+      <h1>О проекте QVAQEL</h1>
+      <p class="lead">Платформа для исследователей открытых источников нового поколения</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="content-block reveal">
+      <h2>Что такое OSINT?</h2>
+      <p>
+        <strong>Open Source Intelligence (OSINT)</strong> — это сбор и анализ информации из публично доступных источников:
+        соцсети, реестры, геоданные, архивы, СМИ, спутниковые снимки.
+      </p>
+      <p>
+        Это не взлом — это искусство видеть то, что уже лежит на поверхности. QVAQEL объединяет
+        лучшие практики, инструменты и методологии для эффективной разведки.
+      </p>
+    </div>
+
+    <div class="content-block reveal">
+      <h2>Наша миссия</h2>
+      <p>
+        Мы создаём открытую платформу для исследователей, журналистов, аналитиков и энтузиастов.
+        Наша цель — демократизировать доступ к инструментам разведки и повысить качество
+        информационной работы в обществе.
+      </p>
+    </div>
+
+    <div class="content-block reveal">
+      <h2>Принципы работы</h2>
+      <div class="principles-grid">
+        <div class="principle">
+          <h3>🔍 Прозрачность</h3>
+          <p>Все методы и источники документированы и воспроизводимы</p>
+        </div>
+        <div class="principle">
+          <h3>⚖️ Этика</h3>
+          <p>Строгое соблюдение законодательства и этических норм</p>
+        </div>
+        <div class="principle">
+          <h3>🎯 Точность</h3>
+          <p>Перекрёстная проверка из нескольких независимых источников</p>
+        </div>
+        <div class="principle">
+          <h3>🤝 Сообщество</h3>
+          <p>Открытый обмен знаниями и совместное развитие</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="content-block reveal">
+      <h2>Для кого этот проект?</h2>
+      <ul class="feature-list">
+        <li><strong>Журналисты-расследователи</strong> — проверка фактов и поиск источников</li>
+        <li><strong>Аналитики безопасности</strong> — мониторинг угроз и уязвимостей</li>
+        <li><strong>Исследователи</strong> — академические и прикладные проекты</li>
+        <li><strong>Энтузиасты</strong> — изучение методов разведки и анализа данных</li>
+        <li><strong>Корпоративные команды</strong> — due diligence и конкурентная разведка</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="cta">
+  <div class="container">
+    <div class="cta-box reveal">
+      <h2>Присоединяйтесь к сообществу</h2>
+      <p>Станьте частью растущей сети исследователей открытых источников</p>
+      <div class="hero-actions" style="justify-content:center">
+        <a href="contact.html" class="btn btn-primary">Связаться с нами</a>
+        <a href="tools.html" class="btn btn-ghost">Смотреть инструменты</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="foot-grid">
+      <div class="foot-col">
+        <div class="logo" style="margin-bottom:16px">
+          <div class="logo-banner">
+            <svg viewBox="0 0 200 40" xmlns="http://www.w3.org/2000/svg">
+              <text x="10" y="30" font-family="monospace" font-size="28" font-weight="bold" fill="#00d4ff" letter-spacing="2">QVAQEL</text>
+            </svg>
+          </div>
+        </div>
+        <p>Платформа для исследователей открытых источников. Этика, методология, технологии.</p>
+      </div>
+      <div class="foot-col">
+        <h5>Разделы</h5>
+        <a href="about.html">О проекте</a>
+        <a href="tools.html">Инструменты</a>
+        <a href="methodology.html">Методология</a>
+        <a href="geoint.html">GEOINT</a>
+      </div>
+      <div class="foot-col">
+        <h5>Ресурсы</h5>
+        <a href="#">Блог</a>
+        <a href="#">Кейсы</a>
+        <a href="#">Документация</a>
+        <a href="#">API</a>
+      </div>
+      <div class="foot-col">
+        <h5>Контакты</h5>
+        <a href="contact.html">hello@qvaqel.io</a>
+        <a href="#">Telegram</a>
+        <a href="#">GitHub</a>
+        <a href="#">Matrix</a>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 QVAQEL · Все права защищены</span>
+      <span>build 2.6.1 · session #4a7f9c</span>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="Методология OSINT - этапы и принципы проведения расследований" />
+<title>Методология · QVAQEL</title>
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<div id="bg-canvas"></div>
+<div id="bg-grid"></div>
+
+<header class="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="logo">
+      <div class="logo-banner">
+        <svg viewBox="0 0 200 40" xmlns="http://www.w3.org/2000/svg">
+          <text x="10" y="30" font-family="monospace" font-size="28" font-weight="bold" fill="#00d4ff" letter-spacing="2">QVAQEL</text>
+        </svg>
+      </div>
+    </a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Главная</a></li>
+      <li><a href="about.html">О проекте</a></li>
+      <li><a href="tools.html">Инструменты</a></li>
+      <li><a href="methodology.html" class="active">Методология</a></li>
+      <li><a href="geoint.html">GEOINT</a></li>
+      <li><a href="contact.html">Контакты</a></li>
+    </ul>
+    <button class="nav-cta" onclick="document.getElementById('cta').scrollIntoView({behavior:'smooth'})">Начать →</button>
+    <button class="burger" id="burger" aria-label="Меню">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<section class="page-hero">
+  <div class="container">
+    <div class="reveal">
+      <span class="section-tag">// methodology · qvaqel</span>
+      <h1>Методология расследований</h1>
+      <p class="lead">Структурированный подход превращает хаос данных в проверяемые выводы</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="timeline">
+      <div class="tl-item reveal">
+        <div class="tl-num">STEP 01</div>
+        <h3>Постановка задачи</h3>
+        <p>Чёткое определение цели, границ и допустимых методов. Формулировка гипотез и ключевых вопросов.</p>
+        <div class="tl-details">
+          <h4>Ключевые действия:</h4>
+          <ul>
+            <li>Определение объекта исследования</li>
+            <li>Формулировка исследовательских вопросов</li>
+            <li>Установление правовых и этических границ</li>
+            <li>Планирование ресурсов и сроков</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="tl-item reveal">
+        <div class="tl-num">STEP 02</div>
+        <h3>Сбор данных</h3>
+        <p>Систематический сбор информации из открытых источников: поиск, парсинг, архивирование, фиксация метаданных.</p>
+        <div class="tl-details">
+          <h4>Источники данных:</h4>
+          <ul>
+            <li>Поисковые системы и специализированные базы</li>
+            <li>Социальные сети и форумы</li>
+            <li>Государственные реестры и документы</li>
+            <li>Спутниковые снимки и геоданные</li>
+            <li>Архивы и кэш поисковых систем</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="tl-item reveal">
+        <div class="tl-num">STEP 03</div>
+        <h3>Верификация</h3>
+        <p>Перекрёстная проверка из нескольких независимых источников. Оценка достоверности, работа с дезинформацией.</p>
+        <div class="tl-details">
+          <h4>Методы проверки:</h4>
+          <ul>
+            <li>Триангуляция источников (минимум 3 независимых)</li>
+            <li>Анализ метаданных и цифровых отпечатков</li>
+            <li>Проверка временных меток и геолокации</li>
+            <li>Выявление признаков манипуляции</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="tl-item reveal">
+        <div class="tl-num">STEP 04</div>
+        <h3>Анализ и синтез</h3>
+        <p>Построение связей, графов, временных шкал. Выявление паттернов и аномалий. Формирование целостной картины.</p>
+        <div class="tl-details">
+          <h4>Аналитические техники:</h4>
+          <ul>
+            <li>Построение графов связей (link analysis)</li>
+            <li>Временной анализ (timeline analysis)</li>
+            <li>Геопространственный анализ</li>
+            <li>Статистический анализ и выявление аномалий</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="tl-item reveal">
+        <div class="tl-num">STEP 05</div>
+        <h3>Документирование</h3>
+        <p>Чёткий отчёт с источниками, цепочкой рассуждений и уровнем уверенности. Воспроизводимость — главный критерий качества.</p>
+        <div class="tl-details">
+          <h4>Структура отчёта:</h4>
+          <ul>
+            <li>Резюме и ключевые выводы</li>
+            <li>Методология и использованные источники</li>
+            <li>Детальный анализ с доказательствами</li>
+            <li>Оценка достоверности и ограничений</li>
+            <li>Приложения и сырые данные</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="content-block reveal" style="margin-top: 60px;">
+      <h2>Принципы качественного OSINT</h2>
+      <div class="principles-grid">
+        <div class="principle">
+          <h3>📋 Документирование</h3>
+          <p>Фиксируйте каждый шаг: источники, запросы, даты, результаты. Воспроизводимость — основа доверия.</p>
+        </div>
+        <div class="principle">
+          <h3>⚖️ Этичность</h3>
+          <p>Соблюдайте законы о приватности и авторском праве. Не нарушайте границы допустимого.</p>
+        </div>
+        <div class="principle">
+          <h3>🔍 Критическое мышление</h3>
+          <p>Всегда проверяйте источники. Помните о когнитивных искажениях и предвзятости подтверждения.</p>
+        </div>
+        <div class="principle">
+          <h3>🛡️ Безопасность</h3>
+          <p>Используйте VPN, анонимные браузеры и изолированные среды для защиты своей идентичности.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="cta">
+  <div class="container">
+    <div class="cta-box reveal">
+      <h2>Готовы применить методологию?</h2>
+      <p>Изучите наши инструменты и начните первое расследование</p>
+      <div class="hero-actions" style="justify-content:center">
+        <a href="tools.html" class="btn btn-primary">Перейти к инструментам</a>
+        <a href="geoint.html" class="btn btn-ghost">GEOINT-раздел</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="foot-grid">
+      <div class="foot-col">
+        <div class="logo" style="margin-bottom:16px">
+          <div class="logo-banner">
+            <svg viewBox="0 0 200 40" xmlns="http://www.w3.org/2000/svg">
+              <text x="10" y="30" font-family="monospace" font-size="28" font-weight="bold" fill="#00d4ff" letter-spacing="2">QVAQEL</text>
+            </svg>
+          </div>
+        </div>
+        <p>Платформа для исследователей открытых источников. Этика, методология, технологии.</p>
+      </div>
+      <div class="foot-col">
+        <h5>Разделы</h5>
+        <a href="about.html">О проекте</a>
+        <a href="tools.html">Инструменты</a>
+        <a href="methodology.html">Методология</a>
+        <a href="geoint.html">GEOINT</a>
+      </div>
+      <div class="foot-col">
+        <h5>Ресурсы</h5>
+        <a href="#">Блог</a>
+        <a href="#">Кейсы</a>
+        <a href="#">Документация</a>
+        <a href="#">API</a>
+      </div>
+      <div class="foot-col">
+        <h5>Контакты</h5>
+        <a href="contact.html">hello@qvaqel.io</a>
+        <a href="#">Telegram</a>
+        <a href="#">GitHub</a>
+        <a href="#">Matrix</a>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 QVAQEL · Все права защищены</span>
+      <span>build 2.6.1 · session #4a7f9c</span>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

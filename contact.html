@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="Контакты QVAQEL - свяжитесь с нами" />
+<title>Контакты · QVAQEL</title>
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<div id="bg-canvas"></div>
+<div id="bg-grid"></div>
+
+<header class="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="logo">
+      <div class="logo-banner">
+        <svg viewBox="0 0 200 40" xmlns="http://www.w3.org/2000/svg">
+          <text x="10" y="30" font-family="monospace" font-size="28" font-weight="bold" fill="#00d4ff" letter-spacing="2">QVAQEL</text>
+        </svg>
+      </div>
+    </a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Главная</a></li>
+      <li><a href="about.html">О проекте</a></li>
+      <li><a href="tools.html">Инструменты</a></li>
+      <li><a href="methodology.html">Методология</a></li>
+      <li><a href="geoint.html">GEOINT</a></li>
+      <li><a href="contact.html" class="active">Контакты</a></li>
+    </ul>
+    <button class="nav-cta" onclick="document.getElementById('cta').scrollIntoView({behavior:'smooth'})">Начать →</button>
+    <button class="burger" id="burger" aria-label="Меню">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<section class="page-hero">
+  <div class="container">
+    <div class="reveal">
+      <span class="section-tag">// contact · qvaqel</span>
+      <h1>Свяжитесь с нами</h1>
+      <p class="lead">Есть вопросы, предложения или хотите присоединиться к проекту?</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="contact-grid">
+      <div class="contact-info reveal">
+        <h2>Контактная информация</h2>
+        <p>Мы открыты для сотрудничества с исследователями, журналистами и организациями</p>
+        
+        <div class="contact-methods">
+          <div class="contact-item">
+            <div class="contact-icon">📧</div>
+            <div>
+              <h4>Email</h4>
+              <a href="mailto:hello@qvaqel.io">hello@qvaqel.io</a>
+            </div>
+          </div>
+          
+          <div class="contact-item">
+            <div class="contact-icon">💬</div>
+            <div>
+              <h4>Telegram</h4>
+              <a href="https://t.me/qvaqel" target="_blank">@qvaqel</a>
+            </div>
+          </div>
+          
+          <div class="contact-item">
+            <div class="contact-icon">🐙</div>
+            <div>
+              <h4>GitHub</h4>
+              <a href="https://github.com/qvaqel" target="_blank">github.com/qvaqel</a>
+            </div>
+          </div>
+          
+          <div class="contact-item">
+            <div class="contact-icon">🔐</div>
+            <div>
+              <h4>Matrix</h4>
+              <a href="#">#qvaqel:matrix.org</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="security-note">
+          <h4>🔒 Безопасная связь</h4>
+          <p>Для конфиденциальных вопросов используйте PGP-ключ или Signal</p>
+          <a href="#" class="btn btn-ghost" style="margin-top: 12px;">Скачать PGP-ключ</a>
+        </div>
+      </div>
+
+      <div class="contact-form-wrap reveal">
+        <h2>Напишите нам</h2>
+        <form class="contact-form" id="contactForm">
+          <div class="form-group">
+            <label for="name">Имя</label>
+            <input type="text" id="name" name="name" required>
+          </div>
+          
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+          </div>
+          
+          <div class="form-group">
+            <label for="subject">Тема</label>
+            <select id="subject" name="subject" required>
+              <option value="">Выберите тему</option>
+              <option value="general">Общий вопрос</option>
+              <option value="collaboration">Сотрудничество</option>
+              <option value="tools">Предложить инструмент</option>
+              <option value="bug">Сообщить об ошибке</option>
+              <option value="other">Другое</option>
+            </select>
+          </div>
+          
+          <div class="form-group">
+            <label for="message">Сообщение</label>
+            <textarea id="message" name="message" rows="6" required></textarea>
+          </div>
+          
+          <button type="submit" class="btn btn-primary" style="width: 100%;">
+            Отправить сообщение
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+          </button>
+        </form>
+        
+        <div class="form-status" id="formStatus"></div>
+      </div>
+    </div>
+
+    <div class="content-block reveal" style="margin-top: 60px;">
+      <h2>Часто задаваемые вопросы</h2>
+      <div class="faq-list">
+        <div class="faq-item">
+          <h4>Как присоединиться к проекту?</h4>
+          <p>Напишите нам через форму выше или в Telegram. Мы всегда рады новым участникам с опытом в OSINT, разработке или аналитике.</p>
+        </div>
+        
+        <div class="faq-item">
+          <h4>Можно ли использовать материалы сайта?</h4>
+          <p>Да, все образовательные материалы доступны под лицензией Creative Commons. Инструменты и код — под открытыми лицензиями.</p>
+        </div>
+        
+        <div class="faq-item">
+          <h4>Как сообщить об ошибке?</h4>
+          <p>Используйте форму выше с темой "Сообщить об ошибке" или создайте issue на нашем GitHub.</p>
+        </div>
+        
+        <div class="faq-item">
+          <h4>Предлагаете ли вы обучение?</h4>
+          <p>Мы регулярно проводим воркшопы и публикуем обучающие материалы. Следите за анонсами в нашем Telegram-канале.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="foot-grid">
+      <div class="foot-col">
+        <div class="logo" style="margin-bottom:16px">
+          <div class="logo-banner">
+            <svg viewBox="0 0 200 40" xmlns="http://www.w3.org/2000/svg">
+              <text x="10" y="30" font-family="monospace" font-size="28" font-weight="bold" fill="#00d4ff" letter-spacing="2">QVAQEL</text>
+            </svg>
+          </div>
+        </div>
+        <p>Платформа для исследователей открытых источников. Этика, методология, технологии.</p>
+      </div>
+      <div class="foot-col">
+        <h5>Разделы</h5>
+        <a href="about.html">О проекте</a>
+        <a href="tools.html">Инструменты</a>
+        <a href="methodology.html">Методология</a>
+        <a href="geoint.html">GEOINT</a>
+      </div>
+      <div class="foot-col">
+        <h5>Ресурсы</h5>
+        <a href="#">Блог</a>
+        <a href="#">Кейсы</a>
+        <a href="#">Документация</a>
+        <a href="#">API</a>
+      </div>
+      <div class="foot-col">
+        <h5>Контакты</h5>
+        <a href="contact.html">hello@qvaqel.io</a>
+        <a href="#">Telegram</a>
+        <a href="#">GitHub</a>
+        <a href="#">Matrix</a>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 QVAQEL · Все права защищены</span>
+      <span>build 2.6.1 · session #4a7f9c</span>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+<script>
+  const contactForm = document.getElementById('contactForm');
+  const formStatus = document.getElementById('formStatus');
+
+  contactForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    
+    const formData = new FormData(contactForm);
+    const data = Object.fromEntries(formData);
+    
+    formStatus.innerHTML = '<div class="status-message sending">Отправка...</div>';
+    
+    setTimeout(() => {
+      formStatus.innerHTML = '<div class="status-message success">✓ Сообщение отправлено! Мы ответим в течение 24 часов.</div>';
+      contactForm.reset();
+      
+      setTimeout(() => {
+        formStatus.innerHTML = '';
+      }, 5000);
+    }, 1500);
+  });
+</script>
+</body>
+</html>

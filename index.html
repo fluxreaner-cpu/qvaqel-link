@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="QVAQEL - Платформа для разведки открытых источников. OSINT, GEOINT, SIGINT инструменты и методологии." />
+<title>QVAQEL · Разведка открытых источников</title>
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<div id="bg-canvas"></div>
+<div id="bg-grid"></div>
+
+<header class="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="logo">
+      <div class="logo-banner">
+        <svg viewBox="0 0 200 40" xmlns="http://www.w3.org/2000/svg">
+          <text x="10" y="30" font-family="monospace" font-size="28" font-weight="bold" fill="#00d4ff" letter-spacing="2">QVAQEL</text>
+        </svg>
+      </div>
+    </a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html" class="active">Главная</a></li>
+      <li><a href="about.html">О проекте</a></li>
+      <li><a href="tools.html">Инструменты</a></li>
+      <li><a href="methodology.html">Методология</a></li>
+      <li><a href="geoint.html">GEOINT</a></li>
+      <li><a href="contact.html">Контакты</a></li>
+    </ul>
+    <button class="nav-cta" onclick="document.getElementById('cta').scrollIntoView({behavior:'smooth'})">Начать →</button>
+    <button class="burger" id="burger" aria-label="Меню">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container">
+    <div class="hero-grid">
+      <div class="reveal">
+        <div class="hero-badge">
+          <span class="dot"></span>
+          <span>СИСТЕМА АКТИВНА · v2.6.1</span>
+        </div>
+        <h1>Разведка <span class="grad">открытых источников</span> нового поколения</h1>
+        <p class="lead">
+          OSINT, GEOINT, SIGINT и смежные дисциплины — всё, что нужно для сбора,
+          анализа и верификации информации из публичных данных. Этика, методология, инструменты.
+        </p>
+        <div class="hero-actions">
+          <a href="tools.html" class="btn btn-primary">
+            Исследовать
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+          </a>
+          <a href="methodology.html" class="btn btn-ghost">Методология</a>
+        </div>
+
+        <div class="stats reveal">
+          <div class="stat"><span class="stat-num" data-count="147">0</span><span class="stat-label">Инструментов</span></div>
+          <div class="stat"><span class="stat-num" data-count="23">0</span><span class="stat-label">Методик</span></div>
+          <div class="stat"><span class="stat-num" data-count="89">0</span><span class="stat-label">Стран</span></div>
+          <div class="stat"><span class="stat-num" data-count="24">0</span><span class="stat-label">Часа / 7 дней</span></div>
+        </div>
+      </div>
+
+      <div class="reveal">
+        <div class="terminal">
+          <div class="terminal-head">
+            <span class="dot r"></span><span class="dot y"></span><span class="dot g"></span>
+            <span class="terminal-title">qvaqel@lab:~/recon</span>
+          </div>
+          <div class="terminal-body" id="termBody"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="directions">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="section-tag">// 01 · directions</span>
+      <h2>Ключевые дисциплины</h2>
+      <p>Каждая из них — отдельный мир методик, инструментов и экспертизы</p>
+    </div>
+
+    <div class="cards">
+      <a href="about.html" class="card reveal">
+        <div class="card-icon">
+          <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
+        </div>
+        <h3>OSINT</h3>
+        <p>Разведка по открытым источникам. Поиск, сбор, верификация и анализ публичной информации.</p>
+        <div class="card-tags">
+          <span class="tag">поиск</span><span class="tag">верификация</span><span class="tag">анализ</span>
+        </div>
+      </a>
+
+      <a href="geoint.html" class="card reveal">
+        <div class="card-icon">
+          <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 10 10"/><path d="M22 2 12 12"/><path d="M16 2h6v6"/></svg>
+        </div>
+        <h3>GEOINT</h3>
+        <p>Георазведка: спутниковые снимки, карты, метаданные, геолокация фото и видео.</p>
+        <div class="card-tags">
+          <span class="tag">спутники</span><span class="tag">координаты</span><span class="tag">EXIF</span>
+        </div>
+      </a>
+
+      <a href="about.html" class="card reveal">
+        <div class="card-icon">
+          <svg viewBox="0 0 24 24"><path d="M2 12h4l3-9 6 18 3-9h4"/></svg>
+        </div>
+        <h3>SIGINT</h3>
+        <p>Радиоэлектронная разведка: анализ сигналов, радиоперехват, эфирный мониторинг.</p>
+        <div class="card-tags">
+          <span class="tag">SDR</span><span class="tag">радио</span><span class="tag">шифрование</span>
+        </div>
+      </a>
+
+      <a href="about.html" class="card reveal">
+        <div class="card-icon">
+          <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        </div>
+        <h3>SOCMINT</h3>
+        <p>Разведка по социальным сетям. Профили, связи, цифровой след, поведенческий анализ.</p>
+        <div class="card-tags">
+          <span class="tag">соцсети</span><span class="tag">профили</span><span class="tag">связи</span>
+        </div>
+      </a>
+
+      <a href="about.html" class="card reveal">
+        <div class="card-icon">
+          <svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+        </div>
+        <h3>CYBINT</h3>
+        <p>Киберразведка: анализ утечек, даркнета, цифровых отпечатков, вредоносной активности.</p>
+        <div class="card-tags">
+          <span class="tag">утечки</span><span class="tag">darknet</span><span class="tag">IOC</span>
+        </div>
+      </a>
+
+      <a href="about.html" class="card reveal">
+        <div class="card-icon">
+          <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M16 13H8M16 17H8M10 9H8"/></svg>
+        </div>
+        <h3>FININT</h3>
+        <p>Финансовая разведка: блокчейн-анализ, корпоративные реестры, офшорные структуры.</p>
+        <div class="card-tags">
+          <span class="tag">блокчейн</span><span class="tag">реестры</span><span class="tag">AML</span>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section id="cta">
+  <div class="container">
+    <div class="cta-box reveal">
+      <h2>Готовы начать расследование?</h2>
+      <p>Присоединяйтесь к сообществу исследователей. Доступ к базе инструментов, обучающим материалам и закрытым кейсам.</p>
+      <div class="hero-actions" style="justify-content:center">
+        <a href="contact.html" class="btn btn-primary">
+          Получить доступ
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+        </a>
+        <a href="about.html" class="btn btn-ghost">Узнать больше</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="foot-grid">
+      <div class="foot-col">
+        <div class="logo" style="margin-bottom:16px">
+          <div class="logo-banner">
+            <svg viewBox="0 0 200 40" xmlns="http://www.w3.org/2000/svg">
+              <text x="10" y="30" font-family="monospace" font-size="28" font-weight="bold" fill="#00d4ff" letter-spacing="2">QVAQEL</text>
+            </svg>
+          </div>
+        </div>
+        <p>Платформа для исследователей открытых источников. Этика, методология, технологии.</p>
+      </div>
+      <div class="foot-col">
+        <h5>Разделы</h5>
+        <a href="about.html">О проекте</a>
+        <a href="tools.html">Инструменты</a>
+        <a href="methodology.html">Методология</a>
+        <a href="geoint.html">GEOINT</a>
+      </div>
+      <div class="foot-col">
+        <h5>Ресурсы</h5>
+        <a href="#">Блог</a>
+        <a href="#">Кейсы</a>
+        <a href="#">Документация</a>
+        <a href="#">API</a>
+      </div>
+      <div class="foot-col">
+        <h5>Контакты</h5>
+        <a href="contact.html">hello@qvaqel.io</a>
+        <a href="#">Telegram</a>
+        <a href="#">GitHub</a>
+        <a href="#">Matrix</a>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 QVAQEL · Все права защищены</span>
+      <span>build 2.6.1 · session #4a7f9c</span>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

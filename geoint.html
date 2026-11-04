@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="GEOINT - георазведка, спутниковые снимки, геолокация и анализ пространственных данных" />
+<title>GEOINT · QVAQEL</title>
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<div id="bg-canvas"></div>
+<div id="bg-grid"></div>
+
+<header class="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="logo">
+      <div class="logo-banner">
+        <svg viewBox="0 0 200 40" xmlns="http://www.w3.org/2000/svg">
+          <text x="10" y="30" font-family="monospace" font-size="28" font-weight="bold" fill="#00d4ff" letter-spacing="2">QVAQEL</text>
+        </svg>
+      </div>
+    </a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Главная</a></li>
+      <li><a href="about.html">О проекте</a></li>
+      <li><a href="tools.html">Инструменты</a></li>
+      <li><a href="methodology.html">Методология</a></li>
+      <li><a href="geoint.html" class="active">GEOINT</a></li>
+      <li><a href="contact.html">Контакты</a></li>
+    </ul>
+    <button class="nav-cta" onclick="document.getElementById('cta').scrollIntoView({behavior:'smooth'})">Начать →</button>
+    <button class="burger" id="burger" aria-label="Меню">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<section class="page-hero">
+  <div class="container">
+    <div class="reveal">
+      <span class="section-tag">// geoint · qvaqel</span>
+      <h1>GEOINT — Георазведка</h1>
+      <p class="lead">Анализ географической информации из спутниковых снимков, карт и геоданных</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="content-block reveal">
+      <h2>Что такое GEOINT?</h2>
+      <p>
+        <strong>Geospatial Intelligence (GEOINT)</strong> — это анализ и визуализация данных, 
+        которые описывают физическую местность и деятельность на ней. Включает спутниковые снимки, 
+        аэрофотосъёмку, карты, GPS-данные и метаданные с геотегами.
+      </p>
+    </div>
+
+    <div class="map-section reveal">
+      <h2>География разведки</h2>
+      <p>Визуализация активных точек интереса в реальном времени</p>
+      <div class="map-wrap">
+        <svg class="map-svg" viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <pattern id="dots" width="10" height="10" patternUnits="userSpaceOnUse">
+              <circle cx="1" cy="1" r="0.8" fill="rgba(79,195,247,0.25)"/>
+            </pattern>
+          </defs>
+          
+          <path d="M80,120 Q120,100 160,110 L200,130 Q230,150 220,180 L200,220 Q180,240 150,235 L110,210 Q80,180 80,150 Z"
+                fill="url(#dots)" stroke="rgba(79,195,247,0.3)" stroke-width="1"/>
+          <path d="M240,100 Q300,80 360,90 L420,110 Q460,130 470,170 L460,210 Q430,230 380,225 L320,210 Q270,190 250,160 Z"
+                fill="url(#dots)" stroke="rgba(79,195,247,0.3)" stroke-width="1"/>
+          <path d="M490,100 Q560,85 640,95 L720,110 Q760,130 750,170 L730,210 Q690,230 620,225 L540,210 Q490,190 480,150 Z"
+                fill="url(#dots)" stroke="rgba(79,195,247,0.3)" stroke-width="1"/>
+          <path d="M300,250 Q340,240 380,250 L400,290 Q390,320 360,325 L320,315 Q295,290 300,260 Z"
+                fill="url(#dots)" stroke="rgba(79,195,247,0.3)" stroke-width="1"/>
+          <path d="M560,260 Q600,250 640,260 L660,300 Q650,330 620,335 L580,325 Q555,300 560,270 Z"
+                fill="url(#dots)" stroke="rgba(79,195,247,0.3)" stroke-width="1"/>
+
+          <line class="map-line" x1="150" y1="170" x2="360" y2="150"/>
+          <line class="map-line" x1="360" y1="150" x2="600" y2="160"/>
+          <line class="map-line" x1="600" y1="160" x2="700" y2="200"/>
+          <line class="map-line" x1="150" y1="170" x2="340" y2="280"/>
+          <line class="map-line" x1="600" y1="160" x2="620" y2="290"/>
+
+          <circle class="map-dot" cx="150" cy="170" r="4"/>
+          <circle class="map-point" cx="150" cy="170" r="4"/>
+          <circle class="map-dot" cx="360" cy="150" r="4"/>
+          <circle class="map-point" cx="360" cy="150" r="4" style="animation-delay:.5s"/>
+          <circle class="map-dot" cx="600" cy="160" r="4"/>
+          <circle class="map-point" cx="600" cy="160" r="4" style="animation-delay:1s"/>
+          <circle class="map-dot" cx="700" cy="200" r="4"/>
+          <circle class="map-point" cx="700" cy="200" r="4" style="animation-delay:1.5s"/>
+          <circle class="map-dot" cx="340" cy="280" r="4"/>
+          <circle class="map-point" cx="340" cy="280" r="4" style="animation-delay:2s"/>
+          <circle class="map-dot" cx="620" cy="290" r="4"/>
+          <circle class="map-point" cx="620" cy="290" r="4" style="animation-delay:.8s"/>
+        </svg>
+      </div>
+    </div>
+
+    <div class="content-block reveal">
+      <h2>Ключевые методы GEOINT</h2>
+      <div class="methods-grid">
+        <div class="method-card">
+          <h3>🛰️ Анализ спутниковых снимков</h3>
+          <p>Использование коммерческих и открытых спутниковых данных для мониторинга изменений на местности</p>
+          <div class="card-tags">
+            <span class="tag">Sentinel</span>
+            <span class="tag">Landsat</span>
+            <span class="tag">Google Earth</span>
+          </div>
+        </div>
+
+        <div class="method-card">
+          <h3>📍 Геолокация по фото/видео</h3>
+          <p>Определение места съёмки по визуальным ориентирам, теням, растительности и архитектуре</p>
+          <div class="card-tags">
+            <span class="tag">EXIF</span>
+            <span class="tag">тени</span>
+            <span class="tag">ориентиры</span>
+          </div>
+        </div>
+
+        <div class="method-card">
+          <h3>🗺️ Картографический анализ</h3>
+          <p>Сравнение исторических и современных карт, анализ изменений инфраструктуры</p>
+          <div class="card-tags">
+            <span class="tag">OSM</span>
+            <span class="tag">исторические карты</span>
+            <span class="tag">GIS</span>
+          </div>
+        </div>
+
+        <div class="method-card">
+          <h3>📡 Анализ метаданных</h3>
+          <p>Извлечение GPS-координат, времени съёмки и технических параметров из файлов</p>
+          <div class="card-tags">
+            <span class="tag">EXIF</span>
+            <span class="tag">GPS</span>
+            <span class="tag">timestamp</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="content-block reveal">
+      <h2>Популярные GEOINT-инструменты</h2>
+      <div class="tools-list">
+        <div class="tool-item">
+          <strong>Google Earth Pro</strong>
+          <span>Бесплатный доступ к высокодетальным спутниковым снимкам и 3D-моделям</span>
+        </div>
+        <div class="tool-item">
+          <strong>Sentinel Hub</strong>
+          <span>Платформа для работы со спутниковыми данными Sentinel-2 и Landsat</span>
+        </div>
+        <div class="tool-item">
+          <strong>QGIS</strong>
+          <span>Профессиональная ГИС для анализа пространственных данных</span>
+        </div>
+        <div class="tool-item">
+          <strong>ExifTool</strong>
+          <span>Извлечение и редактирование метаданных файлов</span>
+        </div>
+        <div class="tool-item">
+          <strong>SunCalc</strong>
+          <span>Расчёт положения солнца для определения времени съёмки по теням</span>
+        </div>
+        <div class="tool-item">
+          <strong>Wikimapia</strong>
+          <span>Интерактивная карта с пользовательскими описаниями объектов</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="cta">
+  <div class="container">
+    <div class="cta-box reveal">
+      <h2>Начните GEOINT-расследование</h2>
+      <p>Изучите наши методологии и инструменты для георазведки</p>
+      <div class="hero-actions" style="justify-content:center">
+        <a href="methodology.html" class="btn btn-primary">Методология GEOINT</a>
+        <a href="tools.html" class="btn btn-ghost">Все инструменты</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="foot-grid">
+      <div class="foot-col">
+        <div class="logo" style="margin-bottom:16px">
+          <div class="logo-banner">
+            <svg viewBox="0 0 200 40" xmlns="http://www.w3.org/2000/svg">
+              <text x="10" y="30" font-family="monospace" font-size="28" font-weight="bold" fill="#00d4ff" letter-spacing="2">QVAQEL</text>
+            </svg>
+          </div>
+        </div>
+        <p>Платформа для исследователей открытых источников. Этика, методология, технологии.</p>
+      </div>
+      <div class="foot-col">
+        <h5>Разделы</h5>
+        <a href="about.html">О проекте</a>
+        <a href="tools.html">Инструменты</a>
+        <a href="methodology.html">Методология</a>
+        <a href="geoint.html">GEOINT</a>
+      </div>
+      <div class="foot-col">
+        <h5>Ресурсы</h5>
+        <a href="#">Блог</a>
+        <a href="#">Кейсы</a>
+        <a href="#">Документация</a>
+        <a href="#">API</a>
+      </div>
+      <div class="foot-col">
+        <h5>Контакты</h5>
+        <a href="contact.html">hello@qvaqel.io</a>
+        <a href="#">Telegram</a>
+        <a href="#">GitHub</a>
+        <a href="#">Matrix</a>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 QVAQEL · Все права защищены</span>
+      <span>build 2.6.1 · session #4a7f9c</span>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

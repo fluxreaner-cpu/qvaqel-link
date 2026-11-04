@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="Инструменты OSINT - подборка лучших решений для разведки открытых источников" />
+<title>Инструменты · QVAQEL</title>
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<div id="bg-canvas"></div>
+<div id="bg-grid"></div>
+
+<header class="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="logo">
+      <div class="logo-banner">
+        <svg viewBox="0 0 200 40" xmlns="http://www.w3.org/2000/svg">
+          <text x="10" y="30" font-family="monospace" font-size="28" font-weight="bold" fill="#00d4ff" letter-spacing="2">QVAQEL</text>
+        </svg>
+      </div>
+    </a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Главная</a></li>
+      <li><a href="about.html">О проекте</a></li>
+      <li><a href="tools.html" class="active">Инструменты</a></li>
+      <li><a href="methodology.html">Методология</a></li>
+      <li><a href="geoint.html">GEOINT</a></li>
+      <li><a href="contact.html">Контакты</a></li>
+    </ul>
+    <button class="nav-cta" onclick="document.getElementById('cta').scrollIntoView({behavior:'smooth'})">Начать →</button>
+    <button class="burger" id="burger" aria-label="Меню">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<section class="page-hero">
+  <div class="container">
+    <div class="reveal">
+      <span class="section-tag">// toolkit · qvaqel</span>
+      <h1>Арсенал исследователя</h1>
+      <p class="lead">Подборка ключевых инструментов — от классики до узкоспециализированных решений</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="tools-filter reveal">
+      <button class="filter-btn active" data-filter="all">Все</button>
+      <button class="filter-btn" data-filter="search">Поиск</button>
+      <button class="filter-btn" data-filter="geo">Геоданные</button>
+      <button class="filter-btn" data-filter="social">Соцсети</button>
+      <button class="filter-btn" data-filter="security">Безопасность</button>
+      <button class="filter-btn" data-filter="data">Данные</button>
+    </div>
+
+    <div class="tools-grid">
+      <a class="tool-card reveal" data-category="search" href="https://www.google.com" target="_blank">
+        <div class="tool-logo">G</div>
+        <div class="tool-info">
+          <h4>Google Dorks</h4>
+          <span>Продвинутый поиск</span>
+          <p>Использование операторов поиска для точного нахождения информации</p>
+        </div>
+      </a>
+
+      <a class="tool-card reveal" data-category="search" href="https://shodan.io" target="_blank">
+        <div class="tool-logo">S</div>
+        <div class="tool-info">
+          <h4>Shodan</h4>
+          <span>Поиск устройств в сети</span>
+          <p>Поисковая система для интернет-устройств и серверов</p>
+        </div>
+      </a>
+
+      <a class="tool-card reveal" data-category="data" href="https://spiderfoot.net" target="_blank">
+        <div class="tool-logo">SF</div>
+        <div class="tool-info">
+          <h4>SpiderFoot</h4>
+          <span>Автоматизация OSINT</span>
+          <p>Автоматизированный сбор информации из множества источников</p>
+        </div>
+      </a>
+
+      <a class="tool-card reveal" data-category="data" href="https://web.archive.org" target="_blank">
+        <div class="tool-logo">W</div>
+        <div class="tool-info">
+          <h4>Wayback Machine</h4>
+          <span>Архив интернета</span>
+          <p>Доступ к историческим версиям веб-страниц</p>
+        </div>
+      </a>
+
+      <a class="tool-card reveal" data-category="geo" href="https://earth.google.com" target="_blank">
+        <div class="tool-logo">GE</div>
+        <div class="tool-info">
+          <h4>Google Earth</h4>
+          <span>Спутниковые снимки</span>
+          <p>Высокодетальные спутниковые изображения и 3D-модели</p>
+        </div>
+      </a>
+
+      <a class="tool-card reveal" data-category="search" href="https://www.bellingcat.com" target="_blank">
+        <div class="tool-logo">B</div>
+        <div class="tool-info">
+          <h4>Bellingcat</h4>
+          <span>Расследования</span>
+          <p>Методики и инструменты для открытых расследований</p>
+        </div>
+      </a>
+
+      <a class="tool-card reveal" data-category="security" href="https://github.com/lanmaster53/recon-ng" target="_blank">
+        <div class="tool-logo">R</div>
+        <div class="tool-info">
+          <h4>Recon-ng</h4>
+          <span>Фреймворк разведки</span>
+          <p>Модульный фреймворк для веб-разведки</p>
+        </div>
+      </a>
+
+      <a class="tool-card reveal" data-category="security" href="https://haveibeenpwned.com" target="_blank">
+        <div class="tool-logo">H</div>
+        <div class="tool-info">
+          <h4>Have I Been Pwned</h4>
+          <span>Проверка утечек</span>
+          <p>Проверка email и паролей на участие в утечках данных</p>
+        </div>
+      </a>
+
+      <a class="tool-card reveal" data-category="search" href="https://github.com/laramies/theHarvester" target="_blank">
+        <div class="tool-logo">T</div>
+        <div class="tool-info">
+          <h4>theHarvester</h4>
+          <span>E-mail и поддомены</span>
+          <p>Сбор email-адресов, поддоменов и информации о компании</p>
+        </div>
+      </a>
+
+      <a class="tool-card reveal" data-category="data" href="https://osintframework.com" target="_blank">
+        <div class="tool-logo">O</div>
+        <div class="tool-info">
+          <h4>OSINT Framework</h4>
+          <span>Каталог инструментов</span>
+          <p>Структурированный каталог OSINT-инструментов</p>
+        </div>
+      </a>
+
+      <a class="tool-card reveal" data-category="security" href="https://censys.io" target="_blank">
+        <div class="tool-logo">C</div>
+        <div class="tool-info">
+          <h4>Censys</h4>
+          <span>Интернет-сканирование</span>
+          <p>Поиск хостов, сетей и сертификатов в интернете</p>
+        </div>
+      </a>
+
+      <a class="tool-card reveal" data-category="security" href="https://www.virustotal.com" target="_blank">
+        <div class="tool-logo">V</div>
+        <div class="tool-info">
+          <h4>VirusTotal</h4>
+          <span>Анализ файлов и URL</span>
+          <p>Множественный антивирусный сканер и анализ угроз</p>
+        </div>
+      </a>
+
+      <a class="tool-card reveal" data-category="social" href="https://github.com/sherlock-project/sherlock" target="_blank">
+        <div class="tool-logo">SH</div>
+        <div class="tool-info">
+          <h4>Sherlock</h4>
+          <span>Поиск профилей</span>
+          <p>Поиск учётных записей по имени пользователя в соцсетях</p>
+        </div>
+      </a>
+
+      <a class="tool-card reveal" data-category="social" href="https://github.com/megadose/holehe" target="_blank">
+        <div class="tool-logo">HO</div>
+        <div class="tool-info">
+          <h4>Holehe</h4>
+          <span>Проверка email</span>
+          <p>Проверка регистрации email на различных платформах</p>
+        </div>
+      </a>
+
+      <a class="tool-card reveal" data-category="geo" href="https://www.exiftool.org" target="_blank">
+        <div class="tool-logo">EX</div>
+        <div class="tool-info">
+          <h4>ExifTool</h4>
+          <span>Метаданные</span>
+          <p>Чтение, запись и редактирование метаданных файлов</p>
+        </div>
+      </a>
+
+      <a class="tool-card reveal" data-category="geo" href="https://www.sentinel-hub.com" target="_blank">
+        <div class="tool-logo">SH</div>
+        <div class="tool-info">
+          <h4>Sentinel Hub</h4>
+          <span>Спутниковые данные</span>
+          <p>Доступ к спутниковым снимкам Sentinel и Landsat</p>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section id="cta">
+  <div class="container">
+    <div class="cta-box reveal">
+      <h2>Не нашли нужный инструмент?</h2>
+      <p>Напишите нам, и мы добавим его в каталог или поможем найти альтернативу</p>
+      <div class="hero-actions" style="justify-content:center">
+        <a href="contact.html" class="btn btn-primary">Предложить инструмент</a>
+        <a href="methodology.html" class="btn btn-ghost">Изучить методологию</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="foot-grid">
+      <div class="foot-col">
+        <div class="logo" style="margin-bottom:16px">
+          <div class="logo-banner">
+            <svg viewBox="0 0 200 40" xmlns="http://www.w3.org/2000/svg">
+              <text x="10" y="30" font-family="monospace" font-size="28" font-weight="bold" fill="#00d4ff" letter-spacing="2">QVAQEL</text>
+            </svg>
+          </div>
+        </div>
+        <p>Платформа для исследователей открытых источников. Этика, методология, технологии.</p>
+      </div>
+      <div class="foot-col">
+        <h5>Разделы</h5>
+        <a href="about.html">О проекте</a>
+        <a href="tools.html">Инструменты</a>
+        <a href="methodology.html">Методология</a>
+        <a href="geoint.html">GEOINT</a>
+      </div>
+      <div class="foot-col">
+        <h5>Ресурсы</h5>
+        <a href="#">Блог</a>
+        <a href="#">Кейсы</a>
+        <a href="#">Документация</a>
+        <a href="#">API</a>
+      </div>
+      <div class="foot-col">
+        <h5>Контакты</h5>
+        <a href="contact.html">hello@qvaqel.io</a>
+        <a href="#">Telegram</a>
+        <a href="#">GitHub</a>
+        <a href="#">Matrix</a>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 QVAQEL · Все права защищены</span>
+      <span>build 2.6.1 · session #4a7f9c</span>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+<script>
+  const filterBtns = document.querySelectorAll('.filter-btn');
+  const toolCards = document.querySelectorAll('.tool-card');
+
+  filterBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      filterBtns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      
+      const filter = btn.dataset.filter;
+      
+      toolCards.forEach(card => {
+        if (filter === 'all' || card.dataset.category === filter) {
+          card.style.display = 'flex';
+          setTimeout(() => card.style.opacity = '1', 10);
+        } else {
+          card.style.opacity = '0';
+          setTimeout(() => card.style.display = 'none', 300);
+        }
+      });
+    });
+  });
+</script>
+</body>
+</html>
